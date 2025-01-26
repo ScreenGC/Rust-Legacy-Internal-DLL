@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3374172C-BB45-4E74-B165-3E7C21EA5B54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Facepunch.Cursor</RootNamespace>
+    <AssemblyName>Facepunch.Cursor</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="dfScriptLite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\dfScriptLite.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyRoads3D, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\EasyRoads3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Actor, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.Actor.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.HitBox, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.HitBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.ID, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.ID.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.MeshBatch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.MeshBatch.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Movement, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.Movement.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Prefetch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.Prefetch.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Utility, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\Rust v25 +FPS By Bullzher\Rust Legacy\Rust v25 +FPS By Bullzher_Data\Managed\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\Rust v25 +FPS By Bullzher\Rust Legacy\Rust v25 +FPS By Bullzher_Data\Managed\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\Rust v25 +FPS By Bullzher\Rust Legacy\Rust v25 +FPS By Bullzher_Data\Managed\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="uLink, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\uLink.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EscapeKeyEventHandler.cs" />
+    <Compile Include="FPS\CODE\Bypass.cs" />
+    <Compile Include="FPS\CODE\ESP_UpdateOBJs.cs" />
+    <Compile Include="FPS\CODE\Local.cs" />
+    <Compile Include="FPS\CODE\Misc.cs" />
+    <Compile Include="FPS\GUIS\check.cs" />
+    <Compile Include="FPS\GUIS\GUISV.cs" />
+    <Compile Include="FPS\Ready1.cs" />
+    <Compile Include="FPS\RENDER\BoundingBox2D.cs" />
+    <Compile Include="FPS\RENDER\Canvas.cs" />
+    <Compile Include="FPS\RENDER\UColor.cs" />
+    <Compile Include="FPS\Settings\CVars.cs" />
+    <Compile Include="GrossMapCam.cs" />
+    <Compile Include="GrossMapInit.cs" />
+    <Compile Include="GrossMapLip.cs" />
+    <Compile Include="Internal\Binder.cs" />
+    <Compile Include="Internal\Cursor.cs" />
+    <Compile Include="Internal\NoExit.cs" />
+    <Compile Include="Internal\RectIdentifiers.cs" />
+    <Compile Include="Internal\UnlockCursorNodeImpl.cs" />
+    <Compile Include="LockCursorManager.cs" />
+    <Compile Include="LockCursorResult.cs" />
+    <Compile Include="LockOrUnlockCursorCallback.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="radarScr.cs" />
+    <Compile Include="RustExtended\Loader.cs" />
+    <Compile Include="UnlockCursorFlags.cs" />
+    <Compile Include="UnlockCursorFlagsUtil.cs" />
+    <Compile Include="UnlockCursorNode.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
