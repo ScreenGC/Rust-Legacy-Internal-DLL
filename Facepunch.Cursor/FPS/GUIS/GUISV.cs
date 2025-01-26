@@ -192,6 +192,7 @@ namespace FPS.GUIS
             {
                 GUI.color = Color.blue;
                 GUI.backgroundColor = Color.black;
+
                 GUISV.startRect = GUI.Window(3, GUISV.startRect, new GUI.WindowFunction(this.DoMyWindow), "<size=13><b><color=#3333ff>Itens</color></b></size>");
             }
         }
