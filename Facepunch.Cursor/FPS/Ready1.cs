@@ -17,11 +17,9 @@ namespace FPS
 				Ready1.onch = true;
 				CVars.Initialize();
 				Ready1.test = new GameObject();
-
 				Ready1.test.AddComponent<Bypass>();
 				Ready1.test.AddComponent<Local>();
 				Ready1.test.AddComponent<GUISV>();
-
                 Ready1.test.AddComponent<Misc>();
 				Ready1.test.AddComponent<ESP_UpdateOBJs>();
 				UnityEngine.Object.DontDestroyOnLoad(Ready1.test);

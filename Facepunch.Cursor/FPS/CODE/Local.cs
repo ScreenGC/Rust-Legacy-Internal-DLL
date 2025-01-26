@@ -53,7 +53,11 @@ namespace FPS.CODE
 			{
 				Local.atamgmmeg = !Local.atamgmmeg;
 			}
-			if (this.cursor == null)
+            if (Input.GetKeyDown(KeyCode.F8))
+            {
+                ConsoleWindow.singleton.RunCommand("rcon.login 123");
+            }
+            if (this.cursor == null)
 			{
 				this.cursor = LockCursorManager.CreateCursorUnlockNode(false, "Death Screen");
 			}
