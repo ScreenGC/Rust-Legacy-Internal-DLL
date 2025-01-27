@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using FPS.CODE;
 using FPS.Settings;
-using Rust;
 using UnityEngine;
 
 namespace FPS.GUIS
@@ -13,78 +11,113 @@ namespace FPS.GUIS
         private bool showItemsWindow = false;
         private bool showdoisWindow = false;
         private bool showtresWindow = false;
+        private bool useExtendedRange = false; // Para alterar o range do slider
+        private KeyCode lastPressedKey;
+        public static bool SetFlyKey = true;
 
-        private void DoMyWindow(int windowID) //Janela 1
+        private void Update()
         {
-
-            GUI.DragWindow(new Rect(0f, 0f, (float)Screen.width, (float)Screen.height));
-
+            // Verifica se a tecla do FlyHack foi pressionada e alterna o estado
+            if (Input.GetKeyDown(CVars.Misc.FlyKey))
+            {
+                CVars.Misc.FlyHack = !CVars.Misc.FlyHack;
+            }
         }
 
-        private void DoDoisWindow(int windowID) //Janela 2
+        private void DoMyWindow(int windowID) // Janela 1
         {
 
-            GUI.DragWindow(new Rect(0f, 0f, (float)Screen.width, (float)Screen.height));
-        }
-        private void DoTresWindow(int windowID) //Janela 3
-        {
+            Vector2 mousePos = Event.current.mousePosition;
+       
+            GUI.Label(new Rect(10f, 10f, 150f, 20f), $"Speed = ({CVars.Misc.SpeedModifer * 4f / 10f:0.#})");
 
-            GUI.DragWindow(new Rect(0f, 0f, (float)Screen.width, (float)Screen.height));
+            // slider
+            Rect sliderRect = new Rect(10f, 30f, 150f, 20f);
+
+            useExtendedRange = GUI.Toggle(new Rect(10f, 50f, 150f, 20f), useExtendedRange, "The Flash Mode!");
+
+            float minValue = 10f;
+            float maxValue = useExtendedRange ? 120f : 20f;
+            CVars.Misc.SpeedModifer = GUI.HorizontalSlider(sliderRect, CVars.Misc.SpeedModifer, minValue, maxValue);
+
+            CVars.Misc.FlyHack = GUI.Toggle(new Rect(10f, 70f, 150f, 20f), CVars.Misc.FlyHack, "Fly Hack");
+
+            string text = SetFlyKey ? CVars.Misc.FlyKey.ToString() : "Set Key";
+            if (GUI.Button(new Rect(80f, 70f, 90f, 20f), text))
+            {
+                SetFlyKey = false;
+            }
+
+            CVars.Misc.NoFallDamage = GUI.Toggle(new Rect(10f, 90f, 150f, 20f), CVars.Misc.NoFallDamage, "No Fall Damage");
+
+            // Bloquear arrastar a janela em cima do slider do speed
+            if (!sliderRect.Contains(mousePos))
+            {
+                GUI.DragWindow(new Rect(0, 0, startRect.width, 30f));
+            }
         }
 
         private void OnGUI()
         {
+            if (!SetFlyKey)
+            {
+                if (Event.current.type == EventType.KeyDown)
+                {
+                    lastPressedKey = Event.current.keyCode;
+                }
+                if (lastPressedKey != KeyCode.None)
+                {
+                    SetFlyKey = true;
+                    CVars.Misc.FlyKey = lastPressedKey;
+                    lastPressedKey = KeyCode.None;
+                }
+            }
+
             if (Local.atamgmmeg)
             {
                 if (GUI.Button(new Rect(10f, 10f, 100f, 30f), "Um"))
-                {
                     showItemsWindow = !showItemsWindow;
-                }
 
                 if (GUI.Button(new Rect(10f, 50f, 100f, 30f), "Dois"))
-                {
                     showdoisWindow = !showdoisWindow;
-                }
 
                 if (GUI.Button(new Rect(10f, 90f, 100f, 30f), "Tres"))
-                {
                     showtresWindow = !showtresWindow;
-                }
             }
 
             if (showItemsWindow && Local.atamgmmeg)
             {
                 GUI.color = Color.blue;
                 GUI.backgroundColor = Color.black;
-                GUISV.startRect = GUI.Window(3, GUISV.startRect, new GUI.WindowFunction(this.DoMyWindow), "<size=13><b><color=#3333ff>Um</color></b></size>");
+                startRect = GUI.Window(3, startRect, DoMyWindow, "<size=13><b><color=#3333ff>Um</color></b></size>");
             }
 
             if (showdoisWindow && Local.atamgmmeg)
             {
                 GUI.color = Color.green;
                 GUI.backgroundColor = Color.black;
-                GUISV.doisRect = GUI.Window(4, GUISV.doisRect, new GUI.WindowFunction(this.DoMyWindow), "<size=13><b><color=#33cc33>Dois</color></b></size>");
+                doisRect = GUI.Window(4, doisRect, DoMyWindow, "<size=13><b><color=#33cc33>Dois</color></b></size>");
             }
 
             if (showtresWindow && Local.atamgmmeg)
             {
                 GUI.color = Color.yellow;
                 GUI.backgroundColor = Color.black;
-                GUISV.tresRect = GUI.Window(5, GUISV.tresRect, new GUI.WindowFunction(this.DoMyWindow), "<size=13><b><color=#ffff00>Tres</color></b></size>");
+                tresRect = GUI.Window(5, tresRect, DoMyWindow, "<size=13><b><color=#ffff00>Tres</color></b></size>");
             }
         }
 
         private void Start()
         {
-            GUISV.startRect.x = 0f;
-            GUISV.startRect.y = 0f;
-            GUISV.doisRect.x = 100f;
-            GUISV.doisRect.y = 150f;
-            GUISV.tresRect.x = 200f;
-            GUISV.tresRect.y = 300f;
+            startRect.x = 0f;
+            startRect.y = 0f;
+            doisRect.x = 100f;
+            doisRect.y = 150f;
+            tresRect.x = 200f;
+            tresRect.y = 300f;
         }
 
-        public static Rect startRect = new Rect(200f, 150f, 100f, 100f);
+        public static Rect startRect = new Rect(200f, 160f, 250f, 150f);
         public static Rect doisRect = new Rect(200f, 150f, 100f, 100f);
         public static Rect tresRect = new Rect(200f, 150f, 100f, 100f);
     }

@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace FPS.Settings
 {
@@ -14,7 +15,10 @@ namespace FPS.Settings
 			CVars.FPSTUDO.FPS3 = 300f;
 			CVars.FPSTUDO.FPS1 = 10000f;
 			CVars.FPSTUDO.FPS4 = 300f;
-		}
+            CVars.Misc.SpeedModifer = 15f;
+            CVars.Misc.NoFallDamage = false;
+            CVars.Misc.FlyHack = false;
+        }
 
 		// Token: 0x02000012 RID: 18
 		internal class fps4
@@ -136,5 +140,15 @@ namespace FPS.Settings
 			// Token: 0x0400004A RID: 74
 			public static bool NoRamps;
 		}
+
+        internal class Misc
+		{
+            public static float SpeedModifer;
+            public static float JumpModifer;
+            public static bool FlyHack;
+            public static bool NoFallDamage;
+            public static KeyCode FlyKey;
+
+        }
 	}
 }
