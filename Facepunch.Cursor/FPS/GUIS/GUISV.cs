@@ -1,6 +1,7 @@
 ﻿using System;
 using FPS.CODE;
 using FPS.Settings;
+using Rust;
 using UnityEngine;
 
 namespace FPS.GUIS
@@ -24,18 +25,13 @@ namespace FPS.GUIS
             }
         }
 
-        private void DoMyWindow(int windowID) // Janela 1
+        private void DoMyWindowUm(int windowID)
         {
-
             Vector2 mousePos = Event.current.mousePosition;
-       
             GUI.Label(new Rect(10f, 10f, 150f, 20f), $"Speed = ({CVars.Misc.SpeedModifer * 4f / 10f:0.#})");
 
-            // slider
             Rect sliderRect = new Rect(10f, 30f, 150f, 20f);
-
             useExtendedRange = GUI.Toggle(new Rect(10f, 50f, 150f, 20f), useExtendedRange, "The Flash Mode!");
-
             float minValue = 10f;
             float maxValue = useExtendedRange ? 120f : 20f;
             CVars.Misc.SpeedModifer = GUI.HorizontalSlider(sliderRect, CVars.Misc.SpeedModifer, minValue, maxValue);
@@ -50,10 +46,36 @@ namespace FPS.GUIS
 
             CVars.Misc.NoFallDamage = GUI.Toggle(new Rect(10f, 90f, 150f, 20f), CVars.Misc.NoFallDamage, "No Fall Damage");
 
-            // Bloquear arrastar a janela em cima do slider do speed
             if (!sliderRect.Contains(mousePos))
             {
                 GUI.DragWindow(new Rect(0, 0, startRect.width, 30f));
+            }
+            if (GUI.Button(new Rect(10f, 110f, 200f, 20f), "Unlock Blueprints"))
+            {
+                Misc.AllBlueprints();
+                Notice.Inventory("", "All Blueprints Unlocked!");
+            }
+        }
+
+        private void DoMyWindowDois(int windowID)
+        {
+            Vector2 mousePos = Event.current.mousePosition;
+            // Adicione o conteúdo exclusivo da janela "Dois" aqui
+
+            if (!doisRect.Contains(mousePos))
+            {
+                GUI.DragWindow(new Rect(0, 0, doisRect.width, 30f));
+            }
+        }
+
+        private void DoMyWindowTres(int windowID)
+        {
+            Vector2 mousePos = Event.current.mousePosition;
+            // Adicione o conteúdo exclusivo da janela "Tres" aqui
+
+            if (!tresRect.Contains(mousePos))
+            {
+                GUI.DragWindow(new Rect(0, 0, tresRect.width, 30f));
             }
         }
 
@@ -89,21 +111,21 @@ namespace FPS.GUIS
             {
                 GUI.color = Color.blue;
                 GUI.backgroundColor = Color.black;
-                startRect = GUI.Window(3, startRect, DoMyWindow, "<size=13><b><color=#3333ff>Um</color></b></size>");
+                startRect = GUI.Window(3, startRect, DoMyWindowUm, "<size=13><b><color=#3333ff>Um</color></b></size>");
             }
 
             if (showdoisWindow && Local.atamgmmeg)
             {
                 GUI.color = Color.green;
                 GUI.backgroundColor = Color.black;
-                doisRect = GUI.Window(4, doisRect, DoMyWindow, "<size=13><b><color=#33cc33>Dois</color></b></size>");
+                doisRect = GUI.Window(4, doisRect, DoMyWindowDois, "<size=13><b><color=#33cc33>Dois</color></b></size>");
             }
 
             if (showtresWindow && Local.atamgmmeg)
             {
                 GUI.color = Color.yellow;
                 GUI.backgroundColor = Color.black;
-                tresRect = GUI.Window(5, tresRect, DoMyWindow, "<size=13><b><color=#ffff00>Tres</color></b></size>");
+                tresRect = GUI.Window(5, tresRect, DoMyWindowTres, "<size=13><b><color=#ffff00>Tres</color></b></size>");
             }
         }
 

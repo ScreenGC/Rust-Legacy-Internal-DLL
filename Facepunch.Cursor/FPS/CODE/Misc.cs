@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using Facepunch;
 using FPS.Settings;
+using Rust;
 using UnityEngine;
 
 namespace FPS.CODE
@@ -100,8 +102,25 @@ namespace FPS.CODE
 				}
 			}
 		}
+        public static void AllBlueprints()
+        {
+            Character component = PlayerClient.GetLocalPlayer().controllable.GetComponent<Character>();
+            PlayerInventory playerInventory = component.GetComponent(typeof(PlayerInventory)) as PlayerInventory;
+            if (playerInventory)
+            {
+                List<BlueprintDataBlock> boundBPs = playerInventory.GetBoundBPs();
+                foreach (BlueprintDataBlock blueprintDataBlock in Bundling.LoadAll<BlueprintDataBlock>())
+                {
+                    if (!boundBPs.Contains(blueprintDataBlock))
+                    {
+                        Notice.Inventory(" ", blueprintDataBlock.name);
+                        boundBPs.Add(blueprintDataBlock);
+                    }
+                }
+            }
+        }
 
-					
+
 
         // Token: 0x06000048 RID: 72 RVA: 0x00002F84 File Offset: 0x00001184
         private void Update()
