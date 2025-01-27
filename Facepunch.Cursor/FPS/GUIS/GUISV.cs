@@ -14,10 +14,21 @@ namespace FPS.GUIS
         private bool showdoisWindow = false;
         private bool showtresWindow = false;
 
-        private void DoMyWindow(int windowID)
+        private void DoMyWindow(int windowID) //Janela 1
         {
-            Rect textBoxRect = new Rect(810f, 500f, 70f, 20f);
-            inputValue = GUI.TextField(textBoxRect, inputValue, 3);
+
+            GUI.DragWindow(new Rect(0f, 0f, (float)Screen.width, (float)Screen.height));
+
+        }
+
+        private void DoDoisWindow(int windowID) //Janela 2
+        {
+
+            GUI.DragWindow(new Rect(0f, 0f, (float)Screen.width, (float)Screen.height));
+        }
+        private void DoTresWindow(int windowID) //Janela 3
+        {
+
             GUI.DragWindow(new Rect(0f, 0f, (float)Screen.width, (float)Screen.height));
         }
 
