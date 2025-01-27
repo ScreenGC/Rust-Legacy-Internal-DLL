@@ -66,17 +66,15 @@ namespace FPS.GUIS
             if (!doisRect.Contains(mousePos))
             {
                 GUI.backgroundColor = new UColor(160f, 32f, 240f, 255f).Get();
-                CVars.ESP.DrawPlayers = GUI.Toggle(new Rect(10f, 20f, 100f, 20f), CVars.ESP.DrawPlayers, "Players");
-                CVars.ESP.DrawLoot = GUI.Toggle(new Rect(10f, 40f, 100f, 20f), CVars.ESP.DrawLoot, "Loot");
-                CVars.ESP.DrawRaid = GUI.Toggle(new Rect(10f, 60f, 100f, 20f), CVars.ESP.DrawRaid, "Raid Helper");
-                CVars.ESP.DrawSleepers = GUI.Toggle(new Rect(120f, 20f, 100f, 20f), CVars.ESP.DrawSleepers, "Sleepers");
-                CVars.ESP.DrawAnimals = GUI.Toggle(new Rect(120f, 40f, 100f, 20f), CVars.ESP.DrawAnimals, "Animals");
-                CVars.ESP.DrawResources = GUI.Toggle(new Rect(120f, 60f, 100f, 20f), CVars.ESP.DrawResources, "Resources");
+
+
+                CVars.ESP.DrawResources = GUI.Toggle(new Rect(10f, 20f, 100f, 20f), CVars.ESP.DrawResources, "Resources");
                 GUI.Label(new Rect(70f, 320f, 120f, 20f), "Resource Options");
-                ESP_Resource.Resmetal = GUI.Toggle(new Rect(10f, 340f, 100f, 20f), ESP_Resource.Resmetal, "Metal");
-                ESP_Resource.Ressulfur = GUI.Toggle(new Rect(10f, 360f, 100f, 20f), ESP_Resource.Ressulfur, "Sulfur");
-                ESP_Resource.Resstone = GUI.Toggle(new Rect(120f, 340f, 100f, 20f), ESP_Resource.Resstone, "Stone");
-                ESP_Resource.Reswood = GUI.Toggle(new Rect(120f, 360f, 100f, 20f), ESP_Resource.Reswood, "Wood");
+                ESP_Resource.Resmetal = GUI.Toggle(new Rect(10f, 40f, 100f, 20f), ESP_Resource.Resmetal, "Metal");
+                ESP_Resource.Ressulfur = GUI.Toggle(new Rect(10f, 60f, 100f, 20f), ESP_Resource.Ressulfur, "Sulfur");
+                ESP_Resource.Resstone = GUI.Toggle(new Rect(120f, 40f, 100f, 20f), ESP_Resource.Resstone, "Stone");
+                ESP_Resource.Reswood = GUI.Toggle(new Rect(120f, 60f, 100f, 20f), ESP_Resource.Reswood, "Wood");
+
                 GUI.DragWindow(new Rect(0f, 0f, (float)Screen.width, (float)Screen.height));
             }
         }
@@ -153,7 +151,7 @@ namespace FPS.GUIS
         }
 
         public static Rect startRect = new Rect(200f, 160f, 250f, 150f);
-        public static Rect doisRect = new Rect(200f, 150f, 240f, 400f);
+        public static Rect doisRect = new Rect(200f, 160f, 250f, 150f);
         public static Rect tresRect = new Rect(200f, 150f, 100f, 100f);
     }
 }

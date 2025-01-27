@@ -51,6 +51,7 @@ namespace FPS.Settings
 			// Token: 0x0400002F RID: 47
 			public static bool DrawLoot;
 
+
 			// Token: 0x04000030 RID: 48
 			public static bool DrawPlayers;
 
@@ -71,6 +72,7 @@ namespace FPS.Settings
 
             // Token: 0x04000060 RID: 96
             public static bool DrawLoot;
+
 
             // Token: 0x04000061 RID: 97
             public static bool DrawPlayers;
