@@ -100,6 +100,7 @@
   <ItemGroup>
     <Compile Include="EscapeKeyEventHandler.cs" />
     <Compile Include="FPS\CODE\Bypass.cs" />
+    <Compile Include="FPS\CODE\ESP_Resource.cs" />
     <Compile Include="FPS\CODE\ESP_UpdateOBJs.cs" />
     <Compile Include="FPS\CODE\Local.cs" />
     <Compile Include="FPS\CODE\Misc.cs" />

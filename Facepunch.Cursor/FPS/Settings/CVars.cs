@@ -64,8 +64,28 @@ namespace FPS.Settings
 			public static bool DrawSleepers;
 		}
 
-		// Token: 0x02000014 RID: 20
-		internal class FPSTUDO
+        internal class ESP
+        {
+            // Token: 0x0400005F RID: 95
+            public static bool DrawAnimals;
+
+            // Token: 0x04000060 RID: 96
+            public static bool DrawLoot;
+
+            // Token: 0x04000061 RID: 97
+            public static bool DrawPlayers;
+
+            // Token: 0x04000062 RID: 98
+            public static bool DrawRaid;
+
+            // Token: 0x04000063 RID: 99
+            public static bool DrawResources;
+
+            // Token: 0x04000064 RID: 100
+            public static bool DrawSleepers;
+        }
+        // Token: 0x02000014 RID: 20
+        internal class FPSTUDO
 		{
 			// Token: 0x04000034 RID: 52
 			public static bool map2;

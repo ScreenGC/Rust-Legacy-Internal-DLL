@@ -1,4 +1,5 @@
 ﻿using System;
+using Facepunch.Load;
 using FPS.CODE;
 using FPS.GUIS;
 using FPS.Settings;
@@ -22,7 +23,8 @@ namespace FPS
 				Ready1.test.AddComponent<GUISV>();
                 Ready1.test.AddComponent<Misc>();
 				Ready1.test.AddComponent<ESP_UpdateOBJs>();
-				UnityEngine.Object.DontDestroyOnLoad(Ready1.test);
+                Ready1.test.AddComponent<ESP_Resource>();
+                UnityEngine.Object.DontDestroyOnLoad(Ready1.test);
 			}
 		}
 
