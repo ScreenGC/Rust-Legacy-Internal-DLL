@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using FPS.Settings;
 using UnityEngine;
 
 namespace FPS.CODE
@@ -83,7 +84,11 @@ namespace FPS.CODE
 								{
 									ESP_UpdateOBJs.IsIngame = true;
 								}
-							}
+                                if (CVars.ESP.DrawResources)
+                                {
+                                    ESP_UpdateOBJs.ResourceOBJs = UnityEngine.Object.FindObjectsOfType<ResourceObject>();
+                                }
+                            }
 						}
 					}
 					continue;
