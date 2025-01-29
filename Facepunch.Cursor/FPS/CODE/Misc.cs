@@ -20,12 +20,11 @@ namespace FPS.CODE
 			{
 				if (this.defaultJumping == null)
 				{
-					this.defaultJumping = new CCMotor.Jumping?(ccmotor.jumping.setup);
+
 				}
 				else
 				{
-					ccmotor.minTimeBetweenJumps = 0.1f;
-					ccmotor.jumping.setup.baseHeight = this.defaultJumping.Value.baseHeight * CVars.Misc.JumpModifer;
+
 				}
 				if (this.defaultMovement == null)
 				{
