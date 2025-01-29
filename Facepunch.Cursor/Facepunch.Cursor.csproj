@@ -34,47 +34,62 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="dfScriptLite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\dfScriptLite.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\dfScriptLite.dll</HintPath>
     </Reference>
     <Reference Include="EasyRoads3D, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\EasyRoads3D.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\EasyRoads3D.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.Actor, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.Actor.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Facepunch.Actor.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Geometry">
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Facepunch.Geometry.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.HitBox, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.HitBox.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Facepunch.HitBox.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.ID, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.ID.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Facepunch.ID.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.MeshBatch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.MeshBatch.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Facepunch.MeshBatch.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.Movement, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.Movement.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Facepunch.Movement.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.Prefetch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.Prefetch.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Facepunch.Prefetch.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Sky">
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Facepunch.Sky.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.Utility, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\Facepunch.Utility.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Facepunch.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers">
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Google.ProtocolBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON">
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\Mono.Security.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <HintPath>..\..\Rust v25 +FPS By Bullzher\Rust Legacy\Rust v25 +FPS By Bullzher_Data\Managed\System.dll</HintPath>
@@ -82,16 +97,17 @@
     <Reference Include="System">
       <HintPath>..\..\Rust v25 +FPS By Bullzher\Rust Legacy\Rust v25 +FPS By Bullzher_Data\Managed\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <HintPath>..\..\Rust v25 +FPS By Bullzher\Rust Legacy\Rust v25 +FPS By Bullzher_Data\Managed\System.Core.dll</HintPath>
     </Reference>
     <Reference Include="uLink, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\uLink.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\uLink.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Client v19.12.2013\rust_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Client v19.12.2013\rust_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
